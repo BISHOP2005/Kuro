@@ -6,14 +6,14 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBL-X1Sl1NAIrm7YoJMw2ChO0QgtNPztAg",
-    authDomain: "kuro-ccf9c.firebaseapp.com",
-    databaseURL: "https://kuro-ccf9c-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "kuro-ccf9c",
-    storageBucket: "kuro-ccf9c.firebasestorage.app",
-    messagingSenderId: "367033183970",
-    appId: "1:367033183970:web:20059014d45c4e1e04f8bb",
-    measurementId: "G-M06EZ4S97B"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
