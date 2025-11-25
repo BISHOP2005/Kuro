@@ -37,6 +37,16 @@ export default function Navbar() {
                                     <Link to="/dashboard" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                                         Dashboard
                                     </Link>
+                                    <div className="flex items-center gap-2 px-3 py-2">
+                                        <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-semibold text-xs overflow-hidden">
+                                            {currentUser.photoURL ? (
+                                                <img src={currentUser.photoURL} alt={currentUser.email} className="w-full h-full object-cover" />
+                                            ) : (
+                                                currentUser.email[0].toUpperCase()
+                                            )}
+                                        </div>
+                                        <span className="text-sm font-medium text-gray-300">{currentUser.displayName || currentUser.email.split('@')[0]}</span>
+                                    </div>
                                     <button
                                         onClick={handleLogout}
                                         className="bg-red-500/10 text-red-400 hover:bg-red-500/20 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2"
